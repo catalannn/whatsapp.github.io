@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #25D366;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #25D366;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 1rem;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        section {
+            margin: 2rem 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Estilos para el formulario de acceso */
+        .login-container {
+            text-align: center;
+            padding: 2rem;
+        }
+        .login-container h4 {
+            margin-bottom: 1rem;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 80%;
+            max-width: 300px;
+        }
+        .login-container input[type="button"] {
+            background-color: #25D366;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .login-container input[type="button"]:hover {
+            background-color: #1e8e8e;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="login" class="login-container">
+        <h4>Acceso de Usuarios</h4>
+        <form action="">
+            <h5>Usuarios</h5>
+            <input type="text" id="usuarios" placeholder="Usuario">
+            <h5>Contraseña</h5>
+            <input type="password" id="clave" placeholder="Contraseña">
+            <br><br>
+            <input type="button" value="Confirmar" onclick="verificar()">
+        </form>
+    </div>
+    <div id="content" class="hidden">
+        <header>
+            <h1>Historia de WhatsApp</h1>
+        </header>
+        <nav>
+            <a href="#origen">Origen</a>
+            <a href="#desarrollo">Desarrollo</a>
+            <a href="#adquisicion">Adquisición por Facebook</a>
+            <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#impacto">Impacto Global</a>
+        </nav>
+        <div class="container">
+            <section id="origen">
+                <h2>El Origen de WhatsApp</h2>
+                <p>WhatsApp fue creado en 2009 por Jan Koum y Brian Acton, dos ex-empleados de Yahoo!. La idea surgió como una solución a la necesidad de un servicio de mensajería simple y confiable. Koum y Acton querían desarrollar una aplicación que permitiera a las personas comunicarse fácilmente a través de sus teléfonos móviles.</p>
+            </section>
+            <section id="desarrollo">
+                <h2>Desarrollo y Crecimiento</h2>
+                <p>En sus primeros años, WhatsApp ganó popularidad rápidamente debido a su enfoque en la simplicidad y la ausencia de anuncios. En 2013, la aplicación implementó la función de llamadas VoIP, lo que incrementó aún más su base de usuarios. La compañía también se destacó por su compromiso con la privacidad, al ofrecer cifrado de extremo a extremo para los mensajes.</p>
+            </section>
+            <section id="adquisicion">
+                <h2>Adquisición por Facebook</h2>
+                <p>En febrero de 2014, Facebook adquirió WhatsApp por aproximadamente 19 mil millones de dólares, una de las adquisiciones más grandes en la historia de la tecnología. A pesar de la compra, WhatsApp mantuvo su independencia y continuó operando bajo el liderazgo de Koum y Acton.</p>
+            </section>
+            <section id="funcionalidades">
+                <h2>Funcionalidades Clave</h2>
+                <ul>
+                    <li><strong>Mensajes de Texto:</strong> Comunicación instantánea con amigos y familiares.</li>
+                    <li><strong>Llamadas y Videollamadas:</strong> Permite realizar llamadas de voz y video a través de Internet.</li>
+                    <li><strong>Mensajes de Voz:</strong> Grabación y envío de mensajes de voz.</li>
+                    <li><strong>Estados:</strong> Publicaciones temporales para compartir actualizaciones con contactos.</li>
+                    <li><strong>Cifrado de Extremo a Extremo:</strong> Protección de la privacidad de los mensajes.</li>
+                </ul>
+            </section>
+            <section id="impacto">
+                <h2>Impacto Global</h2>
+                <p>WhatsApp se ha convertido en una de las aplicaciones de mensajería más populares del mundo, con más de 2 mil millones de usuarios activos en todo el planeta. Su facilidad de uso, funciones avanzadas y enfoque en la privacidad han revolucionado la forma en que las personas se comunican, estableciendo nuevos estándares en la industria de las aplicaciones de mensajería.</p>
+            </section>
+        </div>
+        <footer>
+            <p>&copy; 2024 Historia de WhatsApp. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        let control = 0;
+        let Contraseña = 'pass';
+
+        function verificar() {
+            let clave = document.getElementById('clave').value;
+            if (clave != Contraseña) {
+                alert('La contraseña es incorrecta');
+            } else {
+                document.getElementById('login').classList.add('hidden');
+                document.getElementById('content').classList.remove('hidden');
+            }
+        }
+    </script>
+    <br><br>
+</body>
+</html>
